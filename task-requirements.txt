@@ -1,0 +1,26 @@
+A system which recieves and validates patient information about cancer waiting times is being decommissioned.
+
+The information consists of the following fields:
+Patient ID
+Date of Birth
+Date First Seen
+Date of Diagnosis
+Treatment Start Date
+Treatment End Date
+Cancer Type
+Treatment Type
+
+All the records for a single hospital are stored in a csv file. Each row is an individual patient record.
+
+In order to pass validation, the data must meet the following criteria:
+Date First Seen must be before all other dates
+Date of Diagnosis must be between Date First Seen and Treatment Start Date
+Treatment End Date must be after all other dates
+The maximum period of time allowed between Date of Diagnosis and Treatment Start Date is 60 days
+If Cancer Type is 3, Treatment Type must be 3, 4, or 5
+If Cancer Type is 4, Treatment Type must be 1 or 2
+
+If a record passes validation then a success message needs to be generated.
+If a record fails then a failure message needs to be generated informing the user of the reasons why it failed.
+The validation messages must be written to a separate file.
+The user should be informed of the progress of the validation.
